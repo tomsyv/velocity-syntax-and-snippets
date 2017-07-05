@@ -1,0 +1,33 @@
+{
+    "name": "velocity-syntax-and-snippets",
+    "displayName": "velocity-syntax-and-snippets",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "tomsyv",
+    "icon": "images/speedometer.png",
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+        "Languages","Snippets"
+    ],
+    "contributes": {
+    	"languages": [{
+	    "id": "velocity",
+	    "aliases": ["Velocity", "velocity"],
+	    "extensions": [".vm",".inc",".tpl"],
+	    "configuration": "./language-configuration.json"
+	}],
+	"grammars": [{
+	    "language": "velocity",
+	    "scopeName": "source.velocity",
+	    "path": "./syntaxes/velocity.tmLanguage"
+        }],
+        "snippets": [
+            {
+                "language": "velocity",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

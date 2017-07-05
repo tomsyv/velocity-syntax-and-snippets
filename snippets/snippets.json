@@ -1,0 +1,255 @@
+{
+	"count": {
+		"prefix": "count",
+		"body": "\n\\$velocityCount\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"dateFormat": {
+		"prefix": "dateFormat",
+		"body": "\n\\$date.format( \"${1:dd.MM.yyyy - HH:mm:ss}\" , ${0:\\$date.getSystemTime()} )\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"debug": {
+		"prefix": "debug",
+		"body": "#if(\\$!{request.getParameter('debug')}) ##\r\n<!--DEBUG:\r\n\t=====================================\r\n\tFILE:    $TM_FILENAME\r\n\tLOCATION:    $TM_FILEPATH\r\n\tLINE:      $TM_LINE_NUMBER\r\n\t=====================================\r\n\t${0:${1:obj}: \\${${1}\\}}\r\n-->\r\n#end ##\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"el": {
+		"prefix": "el",
+		"body": "\r\n#else${0} ##\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"exist": {
+		"prefix": "exist",
+		"body": "\r\n\\$include.exists( \"${0:filepath}\" )\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"for": {
+		"prefix": "for",
+		"body": "\r\n#foreach( \\$${1:var} in \\$!{${2:collection}} ) ##\r\n\t${0}\r\n#end ##\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"param": {
+		"prefix": "param",
+		"body": "\r\n\\$!{request.getParameter( \"${1:parameter name}\" )}\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"vm": {
+		"prefix": "vm",
+		"body": "\r\n#!vm;utf-8\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"host": {
+		"prefix": "host",
+		"body": "\r\n\\$!{link.getHost()}\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"!": {
+		"prefix": "!",
+		"body": "\r\n<!-- ${0} -->\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"ifel": {
+		"prefix": "ifel",
+		"body": "\r\n#if( ${1:condition} ) ##\r\n\t${2}\r\n#else ##\r\n\t${0}\r\n#end ##\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"if": {
+		"prefix": "if",
+		"body": "\r\n#if( ${1:condition} ) ##\r\n\t${0}\r\n#end ##\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"ifparam": {
+		"prefix": "ifparam",
+		"body": "\r\n#if( \\$!{request.getParameter( \"${1:parameter name}\" )} ) ##\r\n    ${0}\r\n#end ##\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"ept": {
+		"prefix": "ept",
+		"body": "\nisEmpty()\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"isfeature": {
+		"prefix": "isfeature",
+		"body": "\n\\$_userAgent.isFeaturePhone()\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"issmart": {
+		"prefix": "issmart",
+		"body": "\n\\$_userAgent.isSmartPhone()\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"isweb": {
+		"prefix": "isweb",
+		"body": "\n\\$_userAgent.isWeb()\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"console": {
+		"prefix": "console",
+		"body": "\n<script>console.log( ${0} )</script>\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"request": {
+		"prefix": "request",
+		"body": "\n\\$_json.request( ${0:url} )\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"jstos": {
+		"prefix": "jstos",
+		"body": "\n\\$_json.toString( ${0:obj} )\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	".ks": {
+		"prefix": ".ks",
+		"body": "\n.keySet()\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"+": {
+		"prefix": "+",
+		"body": "\r\n\\$math.add( \\$${1:number}, ${0:\\$number} )\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"/": {
+		"prefix": "/",
+		"body": "\r\n\\$math.div( \\$${1:number}, ${0:\\$number} )\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"*": {
+		"prefix": "*",
+		"body": "\r\n\\$math.mul( \\$${1:number}, ${0:\\$number} )\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"-": {
+		"prefix": "-",
+		"body": "\r\n\\$math.sub( \\$${1:number}, ${0:\\$number} )\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"par": {
+		"prefix": "par",
+		"body": "\r\n#parse( \"${0:url}\" )\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"read": {
+		"prefix": "read",
+		"body": "\r\n$_reader.read( \"${0:file}\" )\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"redi": {
+		"prefix": "redi",
+		"body": "\n\\$response.setStatus(${1:301})\n\\$response.sendRedirect(\"${2:\\$${0:var}}\")\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"set": {
+		"prefix": "set",
+		"body": "\r\n#set( \\$${1:var} = ${0:valor} )\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"ctype": {
+		"prefix": "ctype",
+		"body": "\n\\$response.setContentType(\"${1:application/x-web-app-manifest+json}\")${0}\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"st": {
+		"prefix": "st",
+		"body": "\n#stop\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"sysdate": {
+		"prefix": "sysdate",
+		"body": "\n\\$date.getSystemTime()\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	".str": {
+		"prefix": ".str",
+		"body": "\n.toString()\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	".up": {
+		"prefix": ".up",
+		"body": "\n.toUpperCase()\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"$": {
+		"prefix": "$",
+		"body": "\r\n\\$${1:!}{${2:var}}\r\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"map": {
+		"prefix": "map",
+		"body": "\r\n#set (\\$${1:mapName}= {})\r\n\t$!${1:mapName}.put('${2}','${0}') ##",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"mapPut": {
+		"prefix": "mapPut",
+		"body": "$!${1:mapName}.put('${2}','${0}') ##",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"indexOf": {
+		"prefix": "indexOf",
+		"body": ".indexOf(\\$${1:string})",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"substring": {
+		"prefix": "substring",
+		"body": ".substring(0)",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"size": {
+		"prefix": "size",
+		"body": ".size()",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"formatCurrency": {
+		"prefix": "formatCurrency",
+		"body": "$!number.format('#,##0.00', \\$${1:number}))",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"formatBankAcct": {
+		"prefix": "formatBankAcct",
+		"body": "$!number.formatAccountNumber(\\$${1:number})",
+		"description": "",
+		"scope": "source.velocity"
+	}
+
+}
