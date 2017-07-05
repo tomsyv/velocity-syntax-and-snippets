@@ -1,6 +1,7 @@
 ## Installation
 
 Copy the generated snippets folder to a new folder under your .vscode/extensions folder and restart VS Code.
+_Maybe I'll publish this extension at a later time, but for now it's too raw, and I need to refine it._
 
 ## Syntax
 Syntax highlighting for velocity
@@ -45,5 +46,7 @@ Syntax highlighting for velocity
 *	``indexOf`` - index of a string within a string ``.indexOf(${string})``
 *	``substring`` - substring ``.substring(0)``
 *	``size`` - sice of array ``.size()``
-*	``formatCurrency`` - format currency ``$!number.format('#,##0.00', ${number}))``
-*	``formatBankAcct`` - format bank account number ``$!number.formatAccountNumber(${number})``
+*	``formatCurrency`` - format currency (*) ``$!number.format('#,##0.00', $number))``
+*	``formatBankAcct`` - format bank account number (*) ``$!number.formatAccountNumber($number)``
+
+(*) _Syntax specific to a specific project @workplace. :)_
