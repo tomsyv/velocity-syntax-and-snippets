@@ -7,7 +7,31 @@
 	},
 	"dateFormat": {
 		"prefix": "dateFormat",
-		"body": "\n\\$date.format( \"${1:dd.MM.yyyy - HH:mm:ss}\" , ${0:\\$date.getSystemTime()} )\n",
+		"body": "\n\\$date.format( \"${1:format}\" , ${0:date} )\n",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"dd.MM.yyyy":{
+		"prefix": "dd.MM.yyyy",
+		"body": "dd.MM.yyyy",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"dd.MM.yyyy - HH:mm:ss":{
+		"prefix": "dd.MM.yyyy - HH:mm:ss",
+		"body": "dd.MM.yyyy - HH:mm:ss",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"yyyy-MM-dd":{
+		"prefix": "yyyy-MM-dd",
+		"body": "yyyy-MM-dd",
+		"description": "",
+		"scope": "source.velocity"
+	},
+	"yyyy-MMM-dd":{
+		"prefix": "yyyy-MMM-dd",
+		"body": "yyyy-MMM-dd",
 		"description": "",
 		"scope": "source.velocity"
 	},

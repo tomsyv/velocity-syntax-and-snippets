@@ -2,9 +2,12 @@
 
 Copy the generated snippets folder to a new folder under your .vscode/extensions folder and restart VS Code.
 
+## Syntax
+Syntax highlighting for velocity
+
 ## Snippets
 
-*	``for`` - foreach ``#foreach( $var in $!{colection} ) ... #end``
+*	``for`` - foreach ``#foreach( $var in $!{collection} ) ... #end``
 *	``param`` - get url param ``$!{request.getParameter( 'someparameter' )}``
 *	``host`` - get host name ``$!{link.getHost()}``
 *	``if`` - if structure, without else ``#if(condition) ... #end``
@@ -37,10 +40,10 @@ Copy the generated snippets folder to a new folder under your .vscode/extensions
 *	``.ks`` - Object keys to Array ``.keySet()``
 *	``st`` - STOP!!! Hammer time! ``#stop``
 *	``ctype`` - set the content type of header's request ``$response.setContentType("type")``
-*	``map`` - ``\r\n#set (\\$${1:mapName}= {})\r\n\t$!${1:mapName}.put('${2}','${0}') ##``
-*	``mapPut`` - ``$!${1:mapName}.put('${2}','${0}') ##``
-*	``indexOf`` - ``.indexOf(\\$${1:string})``
-*	``substring`` - ``.substring(0)``
-*	``size`` - ``.size()``
-*	``formatCurrency`` - ``$!number.format('#,##0.00', \\$${1:number}))``
-*	``formatBankAcct`` - ``$!number.formatAccountNumber(\\$${1:number})``
+*	``map`` - create map and first put sentence ``#set ({mapName}= {}) ... $!{mapName}.put('','') ##``
+*	``mapPut`` - map put sentence ``$!{mapName}.put('','') ##``
+*	``indexOf`` - index of a string within a string ``.indexOf(${string})``
+*	``substring`` - substring ``.substring(0)``
+*	``size`` - sice of array ``.size()``
+*	``formatCurrency`` - format currency ``$!number.format('#,##0.00', ${number}))``
+*	``formatBankAcct`` - format bank account number ``$!number.formatAccountNumber(${number})``
