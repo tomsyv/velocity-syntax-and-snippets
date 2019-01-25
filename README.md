@@ -1,6 +1,6 @@
 ## Installation
 
-Copy the generated snippets folder to a new folder under your .vscode/extensions folder and restart VS Code.
+* To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
 _Maybe I'll publish this extension at a later time, but for now it's too raw, and I need to refine it._
 
 ## Syntax
